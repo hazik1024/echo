@@ -1,0 +1,1 @@
+go build -o echoServer.exe echo.go
