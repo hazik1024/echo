@@ -17,6 +17,8 @@ RUN mkdir /server
 
 # 将上一步构建的应用复制到当前镜像的/server/目录下
 COPY --from=build /app/echoserver /server/
+# 设置执行权限
+RUN chmod +x /server/echoserver
 
 RUN ls -l /server
 
