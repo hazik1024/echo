@@ -78,8 +78,6 @@ func handleTCP(tcpConn net.Conn) {
 			log.Printf("[TCP] Read err: %s", err.Error())
 			break
 		}
-		b := buffer[:length]
-		log.Println("b:", b)
 		_, err = tcpConn.Write(buffer[:length])
 		if err != nil {
 			log.Printf("[TCP] Write err: %s", err.Error())
